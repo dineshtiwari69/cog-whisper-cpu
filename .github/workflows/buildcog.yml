@@ -9,13 +9,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    options: --user root
     steps:
       - name: Check out code
         uses: actions/checkout@v3
 
       - name: Setup Cog
         uses: replicate/setup-cog@v1.0.2
-        options: --user root
         with:
           token: ${{ secrets.REPLICATE_API_TOKEN }}
 
