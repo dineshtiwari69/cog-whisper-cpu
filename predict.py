@@ -41,7 +41,7 @@ class Predictor(BasePredictor):
         audio: Path = Input(description="Audio file"),
         model: str = Input(
             default="large-v2",
-            choices=["large", "large-v2"],
+            choices=["large", "large-v2","small"],
             description="Choose a Whisper model.",
         ),
         transcription: str = Input(
